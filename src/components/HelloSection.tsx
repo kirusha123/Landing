@@ -14,14 +14,7 @@ export const HelloSection = () => {
           <ImageButton image={Tg} url="https://t.me/PenguKAS" />
         </div>
       </div>
-      <div
-        className="w-[500px] h-[500px]"
-        style={{
-          backgroundImage: `url(${Sleep})`,
-          backgroundSize: "cover",
-          marginTop: "-50px",
-        }}
-      />
+      <img src={Sleep} className="w-[450px] h-[450px] animate-bounce" />
     </div>
   );
 };

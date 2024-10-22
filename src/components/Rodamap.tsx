@@ -1,40 +1,50 @@
 import Egg from "../assets/egg.png";
 import Egg2 from "../assets/egg2.png";
+import "./Roadmap.css";
+
 export const RoadMap = () => {
   return (
     <div className="relative flex flex-col items-center w-full min-h-[500px] bg-gradient-to-b from-cyan-200 to-cyan-50 overflow-hidden">
       <div
-        className="absolute top-0 right-0 w-[400px] h-[400px] rotate-12"
+        className="absolute -top-3 right-0 w-[400px] h-[400px] rotate-12 invisible  min-[960px]:visible"
         style={{ backgroundImage: `url(${Egg})`, backgroundSize: "cover" }}
       />
       <div
-        className="absolute top-0 left-0 w-[400px] h-[400px] -rotate-12"
+        className="absolute -top-3 left-0 w-[400px] h-[400px] -rotate-12 invisible  min-[960px]:visible"
         style={{ backgroundImage: `url(${Egg2})`, backgroundSize: "cover" }}
       />
-      <div className="flex flex-col gap-4 ml-7">
+      <div className="flex flex-col gap-4 ml-7 z-10">
         <span className="text-6xl mt-12 font-bold text-slate-900">Roadmap</span>
-        <div className="flex flex-col gap-2 text-slate-800 text-4xl pl-4">
-          <span className="font-bold">1. Community Launch</span>
-          <span className="ml-10 text-3xl">
-            Start Telegram and Twitter communities
-          </span>
-          <span className="font-bold">2. KRC Contract</span>
-          <span className="ml-10 text-3xl">
-            Deploy KRC contract on Kaspa network
-          </span>
-          <span className="font-bold">3. Mint</span>
-          <span className="ml-10 text-3xl">Fair Launch</span>
-          <span className="font-bold">4. NFT Launch</span>
-          <span className="ml-10 text-3xl">
-            Release of the first NFT project on Kaspa
-          </span>
-          <span className="font-bold">5. Future updates</span>
-          <span className="ml-10 text-3xl">
-            Much more to come... Stay tuned!
-          </span>
-        </div>
+        <ul className="list-decimal text-slate-900">
+          <li className="flex flex-col">
+            <span className="font-bold text-3xl">1. Community Launch</span>
+            <span className="text-3xl ml-8">
+              Start Telegram and Twitter communities
+            </span>
+          </li>
+          <li className="flex flex-col">
+            <span className="font-bold text-3xl">2. KRC Contract</span>
+            <span className="text-3xl ml-8">
+              Deploy KRC contract on Kaspa network
+            </span>
+          </li>
+          <li className="flex flex-col">
+            <span className="font-bold text-3xl">3. Mint</span>
+            <span className="text-3xl ml-8">Fair Launch</span>
+          </li>
+          <li className="flex flex-col">
+            <span className="font-bold text-3xl">4. NFT Launch</span>
+            <span className="text-3xl ml-8">Fair Launch</span>
+          </li>
+          <li className="flex flex-col">
+            <span className="font-bold text-3xl">5. Future updates</span>
+            <span className="text-3xl ml-8">
+              Much more to come... Stay tuned!
+            </span>
+          </li>
+        </ul>
       </div>
-      <div className="flex justify-between w-[80%] gap-4 m-6 border-t pt-10 border-slate-500">
+      <div className="flex justify-between w-[80%] gap-4 mx-6 my-10 border-t pt-10 border-slate-500">
         <div className="flex flex-col gap-4">
           <span className="text-3xl font-bold text-slate-800">
             Support the PENGU — slide with PENGU!
