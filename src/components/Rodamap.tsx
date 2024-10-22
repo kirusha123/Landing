@@ -4,7 +4,7 @@ import "./Roadmap.css";
 
 export const RoadMap = () => {
   return (
-    <div className="relative flex flex-col items-center w-full min-h-[500px] bg-gradient-to-b from-cyan-200 to-cyan-50 overflow-hidden">
+    <div className="relative flex flex-col items-start min-[960px]:items-center w-full min-h-[500px] bg-gradient-to-b from-cyan-200 to-cyan-50 overflow-hidden">
       <div
         className="absolute -top-3 right-0 w-[400px] h-[400px] rotate-12 invisible  min-[960px]:visible"
         style={{ backgroundImage: `url(${Egg})`, backgroundSize: "cover" }}
@@ -44,7 +44,7 @@ export const RoadMap = () => {
           </li>
         </ul>
       </div>
-      <div className="flex justify-between w-[80%] gap-4 mx-6 my-10 border-t pt-10 border-slate-500">
+      <div className="flex justify-between flex-col min-[960px]:flex-row  w-[80%] gap-4 mx-6 my-10 border-t pt-10 border-slate-500">
         <div className="flex flex-col gap-4">
           <span className="text-3xl font-bold text-slate-800">
             Support the PENGU — slide with PENGU!
@@ -60,7 +60,12 @@ export const RoadMap = () => {
         <div className="flex flex-col gap-4 justify-center items-center">
           <div className="text-3xl text-slate-800">Support us:</div>
           <div
-            className="text-3xl font-bold cursor-pointer hover:text-amber-400 text-slate-800"
+            style={{
+              textOverflow: "ellipsis",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+            className="text-3xl w-full font-bold cursor-pointer hover:text-amber-400 text-slate-800"
             onClick={() =>
               navigator.clipboard.writeText(
                 "kaspa:qqq87hnee6k2ua7s074mrwa6nprtpvpht3asrs2gqr0w5rquk8r4ze3pcjy9e"
